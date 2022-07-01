@@ -1,3 +1,9 @@
 def study_schedule(permanence_period, target_time):
-    # vamo q vamo
-    """ Faça o código aqui. """
+    acc = 0
+    try:
+        for init, final in permanence_period:
+            if init <= target_time <= final:
+                acc += 1
+        return acc
+    except TypeError:
+        return None
