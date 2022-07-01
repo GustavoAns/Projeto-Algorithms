@@ -35,6 +35,8 @@ def merge(numbers, start, mid, end):
 # Escolha Merge , Pior caso = O(n log n)
 def is_anagram(first_string, second_string):
     try:
+        if len(first_string) != len(second_string):
+            return False
         first_list = list(first_string.lower())
         second_list = list(second_string.lower())
         merge_sort(first_list)
