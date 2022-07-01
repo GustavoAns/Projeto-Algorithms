@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def find_duplicate(nums):
     try:
         most_common = Counter(nums).most_common(1)[0]

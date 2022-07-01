@@ -1,11 +1,10 @@
-def is_palindrome_recursive(word, low_index, high_index):
+def is_palindrome_recursive(word, low_i, high_i):
     try:
-        if low_index == high_index:
+        if ((high_i - low_i == 1 and word[low_i] == word[high_i]) or
+                low_i == high_i):
             return True
-        if high_index - low_index == 1 and word[low_index] == word[high_index]:
-            return True
-        if word[low_index] == word[high_index]:
-            return is_palindrome_recursive(word, low_index + 1, high_index - 1)
+        if word[low_i] == word[high_i]:
+            return is_palindrome_recursive(word, low_i + 1, high_i - 1)
         return False
     except IndexError:
         return False

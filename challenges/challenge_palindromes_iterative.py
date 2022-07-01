@@ -1,6 +1,3 @@
-import re
-
-
 def is_palindrome_iterative(word):
     try:
         inverted = word[::-1]
