@@ -35,14 +35,14 @@ def merge(numbers, start, mid, end):
 # Escolha Merge , Pior caso = O(n log n)
 def is_anagram(first_string, second_string):
     try:
+        if first_string is None or second_string is None:
+            return False
         if len(first_string) != len(second_string):
             return False
         first_list = list(first_string.lower())
         second_list = list(second_string.lower())
         merge_sort(first_list)
         merge_sort(second_list)
-        if first_list == second_list:
-            return True
-        return False
+        return first_list == second_list
     except TypeError:
         return False
